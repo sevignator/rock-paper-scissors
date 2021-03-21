@@ -8,7 +8,7 @@ body {
 h1 {
   text-align: center;
   font-size: 3.5rem;
-  margin: 4rem 0 6rem;
+  margin: 2rem 0 3rem;
 }
 
 h2 {
@@ -30,7 +30,7 @@ p {
 #player-choices img {
   width: 15rem;
   border-radius: 50%;
-  margin: 2rem;
+  margin: 1.5rem;
   border: solid .8rem #3a3a3a;
   transition: border-color 0.2s ease;
 }
