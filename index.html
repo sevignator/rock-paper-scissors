@@ -5,103 +5,32 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+
 </head>
 
 <body>
-  <script>
-    function computerPlay() {
-      // Generate a random number between 0 and 2 (three total options)
-      const randomNumber = Math.floor(Math.random() * 3);
+  <h1>Rock Paper Scissors</h1>
 
-      // Declare an empty variable to hold the future value of the computer's move
-      let computerMove;
+  <div id="player-choices">
+    <img src="images/rock.jpg" alt="" id="rock">
+    <img src="images/paper.jpg" alt="" id="paper">
+    <img src="images/scissors.jpg" alt="" id="scissors">
+  </div>
 
-      // Assign a value to the above variable based on the random number provided earlier
-      switch (randomNumber) {
-        case 0:
-          computerMove = 'rock';
-          break;
-        case 1:
-          computerMove = 'paper';
-          break;
-        case 2:
-          computerMove = 'scissors';
-      }
+  <p id="message">–</p>
 
-      // Output the computer's move
-      return computerMove;
-    }
+  <div id="score">
+    <h2>Score</h2>
+    <div id="score-cols">
+      <p id="player">Player<br><span>0</span></p>
+      <p id="cpu">Computer<br><span>0</span></p>
+    </div>
+  </div>
 
-    function playRound(playerSelection, computerSelection) {
-      // Stardardize the user input to be lowercase
-      playerSelection = playerSelection.toLowerCase();
-
-      // Handle situations where the user chose 'rock'
-      if (playerSelection === 'rock') {
-        if (computerSelection === 'rock') {
-          return 'It\'s a tie. You both chose rock.';
-        } else if (computerSelection === 'scissors') {
-          return 'You win! Rock beats scissors';
-        } else if (computerSelection === 'paper') {
-          return 'You lose... Paper beats rock.';
-        }
-      }
-
-      // Handle situations where the user chose 'paper'
-      else if (playerSelection === 'paper') {
-        if (computerSelection === 'paper') {
-          return 'It\'s a tie. You both chose paper.';
-        } else if (computerSelection === 'rock') {
-          return 'You win! Paper beats rock.';
-        } else if (computerSelection === 'scissors') {
-          return 'You lose... Scissors beats paper';
-        }
-      }
-
-      // Handle situations where the user chose 'scissors'
-      else if (playerSelection === 'scissors') {
-        if (computerSelection === 'scissors') {
-          return 'It\'s a tie. You both chose scissors.';
-        } else if (computerSelection === 'paper') {
-          return 'You win! Scissors beat paper.';
-        } else if (computerSelection === 'rock') {
-          return 'You lose... Rock beats scissors';
-        }
-      }
-
-      // Handle any other situations
-      else {
-        return 'You lose... Invalid selection :(';
-      }
-    }
-
-    function game() {
-      let playerScore = 0;
-      let computerScore = 0;
-
-      for (let round = 0; round < 5; round++) {
-        // Collect both selections and attach them to identifiers, then play a round
-        const playerSelection = prompt('What\'s your move?');
-        const computerSelection = computerPlay();
-        const roundResult = playRound(playerSelection, computerSelection);
-
-        // Increment scores based on the 
-        if (roundResult.startsWith('You win')) {
-          playerScore++;
-        } else if (roundResult.startsWith('You lose')) {
-          computerScore++;
-        }
-
-        console.log(roundResult);
-      }
-
-      // Display the game over message
-      console.log(`Game over! The final score is:
-      Player: ${playerScore}
-      Computer: ${computerScore}`);
-    }
-  </script>
+  <button id="replay">Replay!</button>
 </body>
 
 </html>

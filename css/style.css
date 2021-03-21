@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  background-color: #141414;
+  font-family: 'Courier New', Courier, monospace;
+  color: #fff;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 6rem;
+}
+
+h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 4rem 0 1rem;
+}
+
+p {
+  text-align: center;
+  font-size: 2rem;
+}
+
+#player-choices {
+  display: flex;
+  justify-content: center;
+}
+
+#player-choices img {
+  width: 20rem;
+  border-radius: 50%;
+  margin: 1rem;
+  border: solid .8rem #3a3a3a;
+  transition: border-color 0.2s ease;
+}
+
+#player-choices img:hover {
+  cursor: pointer;
+  border-color: #966adb;
+}
+
+#score-cols {
+  display: flex;
+}
+
+#score-cols p {
+  flex: 1;
+}
+
+#score-cols span {
+  display: block;
+  font-size: 4rem;
+  margin-top: 1rem;
+}
+
+button#replay {
+  display: none;
+  margin: 8rem auto;
+  padding: 1rem 6rem;
+  background-color: transparent;
+  border: solid .4rem #fff;
+  border-radius: .6rem;
+  color: inherit;
+  font-family: inherit;
+  font-size: 2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+button#replay:hover {
+  border-color: #966adb;
+  color: #966adb;
+}
