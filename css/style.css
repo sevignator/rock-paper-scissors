@@ -42,7 +42,7 @@ p {
 
 #score-cols {
   display: flex;
-  width: 85rem;
+  max-width: 85rem;
   margin: 0 auto;
 }
 
